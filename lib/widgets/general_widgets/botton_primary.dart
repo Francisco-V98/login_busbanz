@@ -37,3 +37,37 @@ class ButtonPrimary extends StatelessWidget {
     );
   }
 }
+
+class ButtonPrimaryPro extends StatelessWidget {
+  final String text;
+  const ButtonPrimaryPro({super.key, required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          minimumSize: const Size(double.infinity, 42),
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(8),
+            ),
+          ),
+          backgroundColor: const Color.fromARGB(255, 253, 194, 32),
+          elevation: 1,
+        ),
+        onPressed: () {},
+        child: Text(
+          text,
+          style: const TextStyle(
+            color: Color.fromARGB(255, 14, 33, 51),
+            fontSize: 18,
+            fontWeight: FontWeight.w600,
+            letterSpacing: 0.5,
+          ),
+        ),
+      ),
+    );
+  }
+}

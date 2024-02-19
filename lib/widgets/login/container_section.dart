@@ -35,7 +35,7 @@ class ContainerSection extends StatelessWidget {
                 TextfienldPro(placeholder: 'Contraseña'),
                 // Textfield(label: 'Contraseña'),
                 SizedBox(height: 16),
-                ButtonPrimary(text: 'Iniciar Sesión'),
+                ButtonPrimaryPro(text: 'Iniciar Sesión'),
                 _ForgotPassword(),
                 
                 // ButtonPrimaryGhost(),

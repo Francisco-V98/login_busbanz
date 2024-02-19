@@ -16,15 +16,19 @@ class LoginScreen extends StatelessWidget {
               color: const Color.fromARGB(255, 238, 238, 238),
             ),
             Image.asset('assets/image/header.png'),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'assets/image/logo.png',
+            Center(
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      'assets/image/logo.png',
+                    ),
+                    const ContainerSection(),
+                    const _ChangeRegister(),
+                  ],
                 ),
-                const ContainerSection(),
-                const _ChangeRegister(),
-              ],
+              ),
             ),
           ],
         ),
