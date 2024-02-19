@@ -40,8 +40,9 @@ class Textfield extends StatelessWidget {
 }
 
 class TextfienldPro extends StatelessWidget {
+  final IconData? suffixIcone;
   final String placeholder;
-  const TextfienldPro({super.key, required this.placeholder});
+  const TextfienldPro({super.key, required this.placeholder, this.suffixIcone});
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +50,9 @@ class TextfienldPro extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 24),
       child: TextField(
         decoration: InputDecoration(
-          contentPadding: const EdgeInsets.symmetric(horizontal: 16 ,vertical: 4),
+          suffixIcon: Icon(suffixIcone, size: 20,color: Colors.black.withOpacity(0.5) ),
+          contentPadding:
+              const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
           border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(8)),
             borderSide: BorderSide.none,
