@@ -38,3 +38,33 @@ class Textfield extends StatelessWidget {
     );
   }
 }
+
+class TextfienldPro extends StatelessWidget {
+  final String placeholder;
+  const TextfienldPro({super.key, required this.placeholder});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24),
+      child: TextField(
+        decoration: InputDecoration(
+          contentPadding: const EdgeInsets.symmetric(horizontal: 16 ,vertical: 4),
+          border: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(8)),
+            borderSide: BorderSide.none,
+          ),
+          filled: true,
+          fillColor: const Color.fromARGB(255, 246, 246, 246),
+          floatingLabelBehavior: FloatingLabelBehavior.always,
+          hintText: placeholder,
+          hintStyle: const TextStyle(
+            color: Colors.black26,
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ),
+    );
+  }
+}
